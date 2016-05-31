@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">GymRecorder</string>
     <string name="action_settings">Settings</string>
+    <string name="building_part">练哪</string>
+    <string name="chest">胸</string>
+    <string name="back">背</string>
+    <string name="leg">腿</string>
+    <string name="arm">臂</string>
+    <string name="core">核心</string>
+
 </resources>
