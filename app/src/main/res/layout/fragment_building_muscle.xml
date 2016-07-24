@@ -1,27 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <Button
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/building_part"
-        android:id="@+id/button"
-        android:layout_alignParentTop="true" />
-
-
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="fill_parent"-->
-        <!--android:drawablePadding="10.0dip"-->
-        <!--android:gravity="center_vertical"-->
-        <!--android:includeFontPadding="false"-->
-        <!--android:paddingLeft="17.0dip"-->
-        <!--android:text="部位"-->
-        <!--android:textColor="#ff333333"-->
-        <!--android:textSize="16.0sp"-->
-        <!--android:id="@+id/textView2" />-->
-
-
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_dialog_email" />
 
 </RelativeLayout>
+
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/building_part"-->
+        <!--android:id="@+id/select_part_btn" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/part_selected"-->
+        <!--android:visibility="gone"-->
+        <!--android:gravity="center"/>-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/building_action"-->
+        <!--android:id="@+id/select_action_btn"-->
+        <!--android:visibility="gone"/>-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:drawablePadding="10.0dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:includeFontPadding="false"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingLeft="17.0dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="部位"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#ff333333"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="16.0sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/textView2" />&ndash;&gt;-->
+
+
+
+<!--</LinearLayout>-->
