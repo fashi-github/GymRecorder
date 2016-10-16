@@ -8,18 +8,18 @@ import android.view.ViewGroup;
 /**
  * Created by wizard on 16/7/24.
  */
-public class CompoundSelector extends ViewGroup {
+public class CompoundMenu extends ViewGroup {
 
 
-    public CompoundSelector(Context context) {
+    public CompoundMenu(Context context) {
         super(context);
     }
 
-    public CompoundSelector(Context context, AttributeSet attrs) {
+    public CompoundMenu(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CompoundSelector(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CompoundMenu(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
