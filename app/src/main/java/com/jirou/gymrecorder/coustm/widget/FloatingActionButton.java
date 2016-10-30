@@ -24,6 +24,7 @@ import android.support.annotation.IntDef;
 import android.support.annotation.Size;
 import android.util.AttributeSet;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.jirou.gymrecorder.R;
 
@@ -272,6 +273,35 @@ public class FloatingActionButton extends ImageButton {
         });
 
         return shapeDrawable;
+    }
+
+    public void setIcon(@DrawableRes int icon) {
+        if (mIcon != icon) {
+            mIcon = icon;
+            mIconDrawable = null;
+            updateBackground();
+        }
+    }
+
+    public void setSize(@FAB_SIZE int size) {
+        if (size != SIZE_MINI && size != SIZE_NORMAL) {
+            throw new IllegalArgumentException("Use @FAB_SIZE constants only!");
+        }
+
+        if (mSize != size) {
+            mSize = size;
+            updateCircleSize();
+            updateDrawableSize();
+            updateBackground();
+        }
+    }
+
+    TextView getLabelView() {
+        return (TextView) getTag(R.id.fab_label);
+    }
+
+    public String getTitle() {
+        return mTitle;
     }
 
 
