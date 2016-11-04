@@ -27,9 +27,11 @@ import android.widget.TextView;
 import com.jirou.gymrecorder.R;
 
 /**
- * Created by wizard on 16/10/29.
+ * Created by admin on 16/10/27.
  */
+
 public class FloatingActionsMenu extends ViewGroup {
+
     public static final int EXPAND_UP = 0;
     public static final int EXPAND_DOWN = 1;
     public static final int EXPAND_LEFT = 2;
@@ -459,6 +461,7 @@ public class FloatingActionsMenu extends ViewGroup {
                 case EXPAND_DOWN:
                     mCollapseDir.setProperty(View.TRANSLATION_Y);
                     mExpandDir.setProperty(View.TRANSLATION_Y);
+                    mExpandDir.setProperty(View.TRANSLATION_X);
                     break;
                 case EXPAND_LEFT:
                 case EXPAND_RIGHT:
@@ -644,5 +647,5 @@ public class FloatingActionsMenu extends ViewGroup {
             }
         };
     }
-
 }
+

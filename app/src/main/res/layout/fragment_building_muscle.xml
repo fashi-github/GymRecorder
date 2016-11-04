@@ -15,7 +15,7 @@
         <!--android:layout_margin="@dimen/fab_margin"-->
         <!--android:src="@android:drawable/ic_dialog_email" />-->
 
-    <com.jirou.gymrecorder.coustm.widget.FloatingActionButton
+    <com.jirou.gymrecorder.coustm.widget.FloatingActionsMenu
         android:id="@+id/pink_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +24,24 @@
         fab:fab_colorPressed="@color/pink_pressed"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp">
+
+        <com.jirou.gymrecorder.coustm.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_title="Label on the right"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+        <com.jirou.gymrecorder.coustm.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_size="mini"
+            fab:fab_title="Another one on the right"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+    </com.jirou.gymrecorder.coustm.widget.FloatingActionsMenu>
 
 
 </RelativeLayout>
