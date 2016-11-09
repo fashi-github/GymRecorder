@@ -22,6 +22,8 @@
         fab:fab_icon="@drawable/ic_fab_star"
         fab:fab_colorNormal="@color/pink"
         fab:fab_colorPressed="@color/pink_pressed"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp">
@@ -30,7 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
-            fab:fab_title="Label on the right"
+            fab:fab_size="mini"
+            fab:fab_title="@string/leg"
             fab:fab_colorPressed="@color/white_pressed"/>
 
         <com.jirou.gymrecorder.coustm.widget.FloatingActionButton
@@ -38,7 +41,31 @@
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
             fab:fab_size="mini"
-            fab:fab_title="Another one on the right"
+            fab:fab_title="@string/back"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+        <com.jirou.gymrecorder.coustm.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_size="mini"
+            fab:fab_title="@string/core"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+        <com.jirou.gymrecorder.coustm.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_size="mini"
+            fab:fab_title="@string/chest"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+        <com.jirou.gymrecorder.coustm.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_size="mini"
+            fab:fab_title="@string/arm"
             fab:fab_colorPressed="@color/white_pressed"/>
 
     </com.jirou.gymrecorder.coustm.widget.FloatingActionsMenu>

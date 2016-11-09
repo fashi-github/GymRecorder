@@ -461,7 +461,6 @@ public class FloatingActionsMenu extends ViewGroup {
                 case EXPAND_DOWN:
                     mCollapseDir.setProperty(View.TRANSLATION_Y);
                     mExpandDir.setProperty(View.TRANSLATION_Y);
-                    mExpandDir.setProperty(View.TRANSLATION_X);
                     break;
                 case EXPAND_LEFT:
                 case EXPAND_RIGHT:
