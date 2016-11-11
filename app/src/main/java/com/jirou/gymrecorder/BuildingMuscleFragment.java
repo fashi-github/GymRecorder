@@ -1,15 +1,14 @@
 package com.jirou.gymrecorder;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.jirou.gymrecorder.coustm.widget.FloatingActionButton;
 
 /**
  * Created by wizard on 16/5/2.
@@ -26,6 +25,24 @@ public class BuildingMuscleFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_building_muscle, container, false);
+        final LinearLayout buildingParts = (LinearLayout) v.findViewById(R.id.building_part);
+
+        FloatingActionButton legBtn = (FloatingActionButton) v.findViewById(R.id.leg_btn);
+        legBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView legText = new TextView(getContext());
+                legText.setText("L   e    g");
+                ViewGroup.LayoutParams marginLayoutParams =
+                        new ViewGroup.LayoutParams(1000, 100);
+                legText.setLayoutParams(marginLayoutParams);
+//                marginLayoutParams. = 1000;
+//                marginLayoutParams.topMargin = 1000;
+//                marginLayoutParams.rightMargin = 1000;
+//                marginLayoutParams.bottomMargin = 1000;
+                buildingParts.addView(legText, marginLayoutParams);
+            }
+        });
 
 //        Button selectPartBtn = (Button) v.findViewById(R.id.select_part_btn);
 //        final TextView selectedPart = (TextView) v.findViewById(R.id.part_selected);

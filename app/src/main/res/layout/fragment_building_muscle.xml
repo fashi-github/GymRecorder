@@ -14,6 +14,15 @@
         <!--android:layout_alignParentEnd="true"-->
         <!--android:layout_margin="@dimen/fab_margin"-->
         <!--android:src="@android:drawable/ic_dialog_email" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/building_part"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+    </LinearLayout>
+
 
     <com.jirou.gymrecorder.coustm.widget.FloatingActionsMenu
         android:id="@+id/pink_icon"
@@ -25,10 +34,11 @@
         fab:fab_labelStyle="@style/menu_labels_style"
         fab:fab_labelsPosition="left"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginBottom="16dp">
 
         <com.jirou.gymrecorder.coustm.widget.FloatingActionButton
+            android:id="@+id/leg_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
