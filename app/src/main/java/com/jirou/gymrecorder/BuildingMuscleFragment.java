@@ -2,6 +2,7 @@ package com.jirou.gymrecorder;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,9 @@ public class BuildingMuscleFragment extends Fragment {
                 buildingParts.addView(legText, marginLayoutParams);
             }
         });
+
+        RecyclerView buildings = (RecyclerView) v.findViewById(R.id.building_ongoing);
+
 
 //        Button selectPartBtn = (Button) v.findViewById(R.id.select_part_btn);
 //        final TextView selectedPart = (TextView) v.findViewById(R.id.part_selected);
