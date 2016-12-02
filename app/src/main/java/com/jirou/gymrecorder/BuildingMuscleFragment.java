@@ -45,7 +45,7 @@ public class BuildingMuscleFragment extends Fragment {
             }
         });
 
-        RecyclerView buildings = (RecyclerView) v.findViewById(R.id.building_ongoing);
+        RecyclerView buildingProcedures = (RecyclerView) v.findViewById(R.id.building_procedures);
 
 
 //        Button selectPartBtn = (Button) v.findViewById(R.id.select_part_btn);
