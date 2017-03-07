@@ -2,6 +2,8 @@ package com.jirou.gymrecorder;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,10 +12,16 @@ import android.widget.TextView;
 
 import com.jirou.gymrecorder.coustm.widget.FloatingActionButton;
 
+import com.jirou.gymrecorder.coustm.widget.FloatingActionButton;
+import com.jirou.gymrecorder.coustm.widget.FloatingActionsMenu;
+
 /**
  * Created by wizard on 16/5/2.
  */
 public class BuildingMuscleFragment extends Fragment {
+    protected RecyclerView.LayoutManager mLayoutManager;
+
+
     public BuildingMuscleFragment(){}
 
     public interface SelectPartListener {
@@ -25,7 +33,7 @@ public class BuildingMuscleFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_building_muscle, container, false);
-        final LinearLayout buildingParts = (LinearLayout) v.findViewById(R.id.building_part);
+        final LinearLayout buildingPartsLinear = (LinearLayout) v.findViewById(R.id.building_part);
 
         FloatingActionButton legBtn = (FloatingActionButton) v.findViewById(R.id.leg_btn);
         legBtn.setOnClickListener(new View.OnClickListener() {
@@ -40,9 +48,27 @@ public class BuildingMuscleFragment extends Fragment {
 //                marginLayoutParams.topMargin = 1000;
 //                marginLayoutParams.rightMargin = 1000;
 //                marginLayoutParams.bottomMargin = 1000;
-                buildingParts.addView(legText, marginLayoutParams);
+                buildingPartsLinear.addView(legText, marginLayoutParams);
             }
         });
+
+        RecyclerView buildingParts = (RecyclerView) v.findViewById(R.id.building_parts);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        buildingParts.setLayoutManager(mLayoutManager);
+
+
+        FloatingActionButton actionC = new FloatingActionButton(getContext());
+        actionC.setTitle("Hide/Show Action above");
+        actionC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                actionB.setVisibility(actionB.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+            }
+        });
+
+        final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) v.findViewById(R.id.pink_icon);
+        menuMultipleActions.addButton(actionC);
+
 
 //        Button selectPartBtn = (Button) v.findViewById(R.id.select_part_btn);
 //        final TextView selectedPart = (TextView) v.findViewById(R.id.part_selected);
